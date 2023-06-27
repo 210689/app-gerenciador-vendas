@@ -6,5 +6,6 @@ class Products(models.Model):
     ProductPrice = models.FloatField(null=True)
     ProductStock = models.IntegerField(null=True)
     OtherDetails = models.CharField(max_length=255, null=True)
+    ProductsCategory = models.CharField(max_length=255, null=True)
 
 
