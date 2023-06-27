@@ -9,3 +9,12 @@ def products(request):
         'myproducts': myproducts
     }
     return  HttpResponse(template.render(context, request))
+
+
+def details(request, id):
+  myproduct = Products.objects.get(id=id)
+  template = loader.get_template('details.html')
+  context = {
+    'myproduct': myproduct
+  }
+  return HttpResponse(template.render(context, request))
