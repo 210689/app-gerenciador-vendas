@@ -1,5 +1,6 @@
-from django.shortcuts import render
+from django.template import loader
 from django.http import HttpResponse
 
 def products(request):
-    return  HttpResponse("Produto")
+    template = loader.get_template('products.html')
+    return  HttpResponse(template.render())
