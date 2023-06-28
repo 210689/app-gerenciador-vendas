@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Pedidos</title>
+</head>
+<body>
+  <table>
+    <thead>
+      <tr>
+        <th>Data</th>
+        <th>Produto</th>
+        <th>Quantidade</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for x in myorder %}
+        <tr>
+          <td> {{ x.requestDate}} </td>
+          <td> {{ x.product_id}} </td>
+          <td> {{ x.amount}} </td>
+          <td> {{ x.status}} </td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</body>
+</html>
