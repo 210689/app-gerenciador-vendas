@@ -8,7 +8,7 @@
     <h1>Todos os produtos</h1>
     <ul>
         {% for x in myproducts %}
-        <li><a href="details/{{ x.id }}"> {{ x.ProductName }} {{ x.ProductDescription }} </a></li>
+        <li><a href="details/{{ x.id }}"> {{ x.ProductName }} </a></li>
         {% endfor %}
     </ul>
 </body>
