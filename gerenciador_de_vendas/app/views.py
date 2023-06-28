@@ -1,6 +1,6 @@
 from django.template import loader
 from django.http import HttpResponse
-from .models import Products
+from .models import Products, Order
 
 def products(request):
     myproducts = Products.objects.all().values()
@@ -18,3 +18,11 @@ def details(request, id):
     'myproduct': myproduct
   }
   return HttpResponse(template.render(context, request))
+
+def all_orders(request):
+   myorder = Order.objects.all().values()
+   template = loader.get_template('all_order.html')
+   context = {
+      'myorder': myorder
+   }
+   return HttpResponse(template.render(context,request))
