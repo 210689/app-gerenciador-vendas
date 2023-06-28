@@ -11,4 +11,8 @@ class Products(models.Model):
     ProductsCategory = models.CharField(max_length=255, null=True)
 
 
-
+class Order(models.Model):
+    requestDate = models.DateField()
+    product = models.ForeignKey(Products, on_delete=models.CASCADE)
+    amount = models.IntegerField(null=True)
+    status = models.CharField(max_length=10)
